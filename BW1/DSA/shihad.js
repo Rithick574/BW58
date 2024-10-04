@@ -1,24 +1,24 @@
-// const people = [
-//   { name: "Alice", age: 30 },
-//   { name: "Bob", age: 25 },
-//   { name: "Charlie", age: 30 },
-// ];
+const people = [
+  { name: "Alice", age: 30 },
+  { name: "Bob", age: 25 },
+  { name: "Charlie", age: 30 },
+];
 
 
 
-// function reArrange(obj) {
-//   const age = new Map();
-//   for (const x of obj) {
-//     if (!age.has(x.age)) {
-//       age.set(x.age, []);
-//     }
-//     age.get(x.age).push(x.name);
-//   }
-//   const result = Object.fromEntries(age);
-//   return result;
-// }
+function reArrange(obj) {
+  const age = new Map();
+  for (const x of obj) {
+    if (!age.has(x.age)) {
+      age.set(x.age, []);
+    }
+    age.get(x.age).push(x.name);
+  }
+  const result = Object.fromEntries(age);
+  return result;
+}
 
-// console.log(reArrange(people));
+console.log(reArrange(people));
 
 
 

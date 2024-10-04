@@ -13,7 +13,6 @@ function counter(){
 }
 
 
-
 const a = counter();
 a.add(4)
 a.add(7)

@@ -17,9 +17,8 @@ function merge(left, right) {
       result.push(right.shift());
     }
   }
-  return [...result, ...left, ...right];
+  return [...result,...left, ...right];
 }
 
-const arr = [29, 10, 8, 16, 37, 14, 4, 15];
-
+const arr = [6, 8, 3, 1, 9, 7, 4, 2];
 console.log(mergeSort(arr));

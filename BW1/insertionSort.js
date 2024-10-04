@@ -9,6 +9,6 @@ for(let i=1;i<arr.length;i++){
     arr[j+1] = numberToAdd;
 };
 return arr;
-}
+};
 const arr =[2,5,7,45,3,1,9];
 console.log(insertionSort(arr));
