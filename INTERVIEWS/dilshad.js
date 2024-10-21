@@ -1,0 +1,130 @@
+collection = [
+  {
+    _id: ObjectId("6708840c78fcffe6a35e739c"),
+    name: "iPhone 14",
+    category: "Apple",
+    price: 999,
+    stock: 100,
+    colors: ["Black", "White", "Blue"],
+  },
+  {
+    _id: ObjectId("6708840c78fcffe6a35e739d"),
+    name: "iPhone 14 Pro Max",
+    category: "Apple",
+    price: 1199,
+    stock: 75,
+    colors: ["Space Black", "Deep Purple", "Gold"],
+  },
+  {
+    _id: ObjectId("6708840c78fcffe6a35e739e"),
+    name: "Samsung Galaxy S23",
+    category: "Samsung",
+    price: 950,
+    stock: 80,
+    colors: ["Phantom Black", "Green", "Pink"],
+  },
+  {
+    _id: ObjectId("6708840c78fcffe6a35e739f"),
+    name: "Samsung Galaxy Z Fold 5",
+    category: "Samsung",
+    price: 1799,
+    stock: 50,
+    colors: ["Black", "Silver", "Blue"],
+  },
+  {
+    _id: ObjectId("6708840c78fcffe6a35e73a0"),
+    name: "Vivo X80",
+    category: "Vivo",
+    price: 820,
+    stock: 110,
+    colors: ["Blue", "Orange", "Black"],
+  },
+  {
+    _id: ObjectId("6708840c78fcffe6a35e73a1"),
+    name: "Vivo Y33s",
+    category: "Vivo",
+    price: 320,
+    stock: 200,
+    colors: ["Gold", "Black", "Mint Green"],
+  },
+  {
+    _id: ObjectId("6708840c78fcffe6a35e73a2"),
+    name: "OnePlus 11",
+    category: "OnePlus",
+    price: 850,
+    stock: 120,
+    colors: ["Silver", "Green", "Black"],
+  },
+  {
+    _id: ObjectId("6708840c78fcffe6a35e73a3"),
+    name: "OnePlus Nord 2",
+    category: "OnePlus",
+    price: 420,
+    stock: 300,
+    colors: ["Gray", "Blue", "Green"],
+  },
+  {
+    _id: ObjectId("6708840c78fcffe6a35e73a4"),
+    name: "Google Pixel 7",
+    category: "Google",
+    price: 899,
+    stock: 90,
+    colors: ["Obsidian", "Lemongrass", "Snow"],
+  },
+  {
+    _id: ObjectId("6708840c78fcffe6a35e73a5"),
+    name: "Google Pixel 6a",
+    category: "Google",
+    price: 499,
+    stock: 150,
+    colors: ["Charcoal", "Chalk", "Sage"],
+  },
+  {
+    _id: ObjectId("6708840c78fcffe6a35e73a6"),
+    name: "Xiaomi Mi 12",
+    category: "Xiaomi",
+    price: 799,
+    stock: 150,
+    colors: ["Blue", "Black", "Purple"],
+  },
+  {
+    _id: ObjectId("6708840c78fcffe6a35e73a7"),
+    name: "Xiaomi Redmi Note 12",
+    category: "Xiaomi",
+    price: 250,
+    stock: 400,
+    colors: ["Gray", "Green", "Blue"],
+  },
+  {
+    _id: ObjectId("6708840c78fcffe6a35e73a8"),
+    name: "Realme GT 2 Pro",
+    category: "Realme",
+    price: 699,
+    stock: 200,
+    colors: ["Steel Black", "Green", "Gray"],
+  },
+  {
+    _id: ObjectId("6708840c78fcffe6a35e73a9"),
+    name: "Oppo Find X5",
+    category: "Oppo",
+    price: 780,
+    stock: 60,
+    colors: ["Black", "White", "Gold"],
+  },
+  {
+    _id: ObjectId("6708840c78fcffe6a35e73aa"),
+    name: "Asus ROG Phone 7",
+    category: "Asus",
+    price: 1200,
+    stock: 40,
+    colors: ["Black", "White", "Red"],
+  },
+];
+
+// show the highest priced mobiles in every category
+
+db.collection.aggregate([{$sort:{price:-1}},{$group:{_id:"$category",product:{$first:"$$ROOT"}}}]);
+
+
+// for showing every product 
+db.collection.aggregate([{$sort:{price:-1}},{$group:{_id:"$category",product:{$push:"$$ROOT"}}}])

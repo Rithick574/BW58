@@ -14,8 +14,9 @@
 
 
 
+
 // 3 collections order customer payment
-// payments => enum["payed","failed",],orderId
+// payments => enum["payed","failed","pending"],orderId
 // customers => name,id,email....
 // orders => _id,customerId....
 

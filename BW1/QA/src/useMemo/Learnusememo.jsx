@@ -16,16 +16,16 @@ export const Learnusememo = ({ clicks }) => {
 
     //   const sum = computeSum();
 
-  const sum = useMemo(() => {
-    let i = 0;
-    let sum = 0;
-    while (i < 1000) {
-      sum += i;
-      i++;
-      console.log("usememo");
-    }
-    return sum;
-  },[]);
+  // const sum = useMemo(() => {
+  //   let i = 0;
+  //   let sum = 0;
+  //   while (i < 1000) {
+  //     sum += i;
+  //     i++;
+  //     console.log("usememo");
+  //   }
+  //   return sum;
+  // },[]);
 
   const changeName = () => {
     if (name === "anirudh") {

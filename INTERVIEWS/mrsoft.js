@@ -43,38 +43,38 @@
 // 3) print the cities with the district
 
 
-// const obj = {
-//   countries: [
-//     {
-//       name: "india",
-//       states: [
-//         {
-//           name: "kerala",
-//           dist: [
-//             {
-//               name: "calicut",
-//               cities: [{ name: "city1" }, { name: "city2" }],
-//             },
-//           ],
-//         },
-//       ],
-//     },
-//     {
-//       name: "pakistan",
-//       states: [
-//         {
-//           name: "punjab",
-//           dist: [
-//             {
-//               name: "lahore",
-//               cities: [{ name: "cityA" }],
-//             },
-//           ],
-//         },
-//       ],
-//     },
-//   ],
-// };
+const obj = {
+  countries: [
+    {
+      name: "india",
+      states: [
+        {
+          name: "kerala",
+          dist: [
+            {
+              name: "calicut",
+              cities: [{ name: "city1" }, { name: "city2" }],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      name: "pakistan",
+      states: [
+        {
+          name: "punjab",
+          dist: [
+            {
+              name: "lahore",
+              cities: [{ name: "cityA" }],
+            },
+          ],
+        },
+      ],
+    },
+  ],
+};
 
 
 // db.countries.aggregate([
